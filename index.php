@@ -1,8 +1,9 @@
 <html>
 <head>
-    <title>The Compass</title>
+    <title>Soushiant.Co</title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE9">
+    <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
