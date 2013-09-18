@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
 	$('.tip[title]').qtip({
 		position:{
 			my: 'bottom center',
-			at: 'top center',
+			at: 'center center',
 			adjust: {
 				x: -1,
 				y: -14

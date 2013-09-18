@@ -7,11 +7,11 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.qtip.min.js"></script>
+   
 
     <link href="main.css" rel="stylesheet" type="text/css">
     <link href="jquery.qtip.css" rel="stylesheet" type="text/css">
+    <link href="flexslider.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
 
     <style type="text/css">
@@ -59,6 +59,23 @@
             <div class="description"></div> 
             End Description Block -->
 
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="images/slide1.jpg">
+                    </li>
+                    <li>
+                        <img src="images/slide2.jpg">
+                    </li>
+                    <li>
+                        <img src="images/slide3.jpg">
+                    </li>
+                     <li>
+                        <img src="images/slide4.jpg">
+                    </li>
+                </ul>
+            </div>
+
             <!-- List of Triggers -->
             <ul class="triggers">
                 <li class="trigger-item">
@@ -92,8 +109,8 @@
 
         <!-- Main Info -->
         <div class="main_info">
-            <h1>Mediateq</h1>
-            <p>Mediateq Group</p><p>
+            <h1>Soushiant.Co</h1>
+            <p>All right reserved by Soushiant company</p><p>
         </p></div>
         <!-- End Main Info -->
     </div>
@@ -108,6 +125,8 @@
     <!-- End Page Container -->
 
     <script type="text/javascript" src="main.min.js"></script>
+    <script type="text/javascript" src="flexslider.js"></script>
+    <script type="text/javascript" src="jquery.qtip.min.js"></script>
     <script type="text/javascript">
         $('.switch_color li').on('click', function () {
              var color = $(this).data('color');
