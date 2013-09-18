@@ -1,0 +1,43 @@
+@font-face{
+    font-family: 'bmitra';
+    src: url('./fonts/BMitra.eot');
+    src: url('./fonts/BMitra.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/BMitra.woff') format('woff'),
+         url('./fonts/BMitra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.large{font-size:25px;}
+.medium{font-size:18px;}
+.small{font-size:17px;}
+.x-small{font-size:15px;}
+.latinfont{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.rtl{
+	direction: rtl;
+}
+h1,h2,h3,h4,h5,h6,p,a,span{
+	font-family: 'bmitra';
+}
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 25px;
+}
+h3{
+	font-size: 22px;
+}
+h4{
+	font-size: 20px;
+}
+h5{
+	font-size: 18px;
+}
+h6{
+	font-size: 16px;
+}
+p,span{
+	font-size:17px;
+}
