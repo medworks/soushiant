@@ -13,4 +13,12 @@ jQuery(document).ready(function(){
 			classes: 'ui-tooltip-tipsy ui-tooltip-shadow'
 		}		
 	});
+
+	// Slideshow -----------------------------------------------------------------
+	$('.flexslider').flexslider({
+		animation: "fade",
+		controlNav: false,
+		prevText: "",
+		nextText: "",
+	});
 });
