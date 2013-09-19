@@ -5,12 +5,12 @@ jQuery(document).ready(function(){
 			my: 'bottom center',
 			at: 'center center',
 			adjust: {
-				x: -1,
-				y: -14
+				x: 10,
+				y: -20
 			}
 		},
 		style: {
-			classes: 'ui-tooltip-tipsy ui-tooltip-shadow'
+			classes: 'cream'
 		}		
 	});
 
