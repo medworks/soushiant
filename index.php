@@ -80,10 +80,10 @@
             <!-- List of Triggers -->
             <ul class="triggers">
                 <li class="trigger-item">
-                    <a href="about" class="tip" title="About us" data-url="about.html" data-type="page" data-title="About"><i class="icon-user"></i></a>
+                    <a href="about" class="tip" title="درباره ما" data-url="about.html" data-type="page" data-title="About"><i class="icon-user"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="portfolio" class="tip" title="Portfolio" data-url="portfolio.html" data-type="page" data-title="Portfolio"><i class="icon-briefcase"></i></a>
+                    <a href="portfolio" class="tip" title="گالری تصاویر" data-url="portfolio.html" data-type="page" data-title="Portfolio"><i class="icon-briefcase"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="Twitter" data-type="link" data-title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
@@ -98,10 +98,10 @@
                     <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="icon-google-plus"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="contact" class="tip" title="Contact us" data-url="contact.php" data-type="page" data-title="Email"><i class="icon-envelope-alt"></i></a>
+                    <a href="contact" class="tip" title="تماس با ما" data-url="contact.php" data-type="page" data-title="Email"><i class="icon-envelope-alt"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="resume" class="tip" title="Resume" data-url="resume.html" data-type="page" data-title="Resume"><i class="icon-file-alt"></i></a>
+                    <a href="resume" class="tip" title="رزومه" data-url="resume.html" data-type="page" data-title="Resume"><i class="icon-file-alt"></i></a>
                 </li>
             </ul>
             <!-- End List of Triggers -->
