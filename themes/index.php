@@ -98,7 +98,7 @@
                     <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="icon-github"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="resume" class="tip" title="اینترنت" data-url="resume.html" data-type="page" data-title="Resume"><i class="icon-signal"></i></a>
+                    <a href="internet" class="tip" title="اینترنت" data-url="internet.html" data-type="page" data-title="اینترنت"><i class="icon-signal"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="contact" class="tip" title="تماس با ما" data-url="contact.php" data-type="page" data-title="Email"><i class="icon-envelope-alt"></i></a>
