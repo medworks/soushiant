@@ -110,8 +110,8 @@
 
         <!-- Main Info -->
         <div class="main_info">
-            <h1>Soushiant.Co</h1>
-            <p>All right reserved by Soushiant company</p><p>
+            <h4>Designed by <a href="http://www.mediateq.ir">Mediteq</a></h1>
+            <!-- <p>All right reserved by Soushiant company</p><p> -->
         </p></div>
         <!-- End Main Info -->
     </div>

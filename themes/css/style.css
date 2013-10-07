@@ -41,3 +41,10 @@ h6{
 p,span{
 	font-size:17px;
 }
+a{
+	text-decoration: none;
+	color: #ee6557;
+}
+a:hover{
+	color: #16a6b6;
+}
