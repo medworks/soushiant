@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Soushiant.Co</title>
+    <title>Mediateq</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE9">
     <meta charset="UTF-8">
