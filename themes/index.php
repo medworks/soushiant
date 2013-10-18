@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Mediateq</title>
+    <title>Soushiant.Co</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE9">
     <meta charset="UTF-8">
@@ -86,22 +86,22 @@
                     <a href="portfolio" class="tip" title="گالری تصاویر" data-url="portfolio.html" data-type="page" data-title="Portfolio"><i class="icon-briefcase"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="Twitter" data-type="link" data-title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                    <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="icon-mobile-phone"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="LinkedIn" data-type="link" data-title="LinkedIn" target="_blank"><i class="icon-linkedin"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="icon-github"></i></a>
-                </li>
-                <li class="trigger-item">
                     <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="icon-google-plus"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="contact" class="tip" title="تماس با ما" data-url="contact.php" data-type="page" data-title="Email"><i class="icon-envelope-alt"></i></a>
+                    <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="icon-github"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="resume" class="tip" title="رزومه" data-url="resume.html" data-type="page" data-title="Resume"><i class="icon-file-alt"></i></a>
+                    <a href="internet" class="tip" title="اینترنت" data-url="internet.html" data-type="page" data-title="اینترنت"><i class="icon-signal"></i></a>
+                </li>
+                <li class="trigger-item">
+                    <a href="contact" class="tip" title="تماس با ما" data-url="contact.php" data-type="page" data-title="Email"><i class="icon-envelope-alt"></i></a>
                 </li>
             </ul>
             <!-- End List of Triggers -->
@@ -110,8 +110,8 @@
 
         <!-- Main Info -->
         <div class="main_info">
-            <h4>Designed by <a href="http://www.mediateq.ir">Mediteq</a></h1>
-            <!-- <p>All right reserved by Soushiant company</p><p> -->
+            <h1>Soushiant.Co</h1>
+            <p>All right reserved by Soushiant company</p><p>
         </p></div>
         <!-- End Main Info -->
     </div>
