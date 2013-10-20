@@ -14,6 +14,7 @@
 .latinfont{
 	font-family: Arial, Helvetica, sans-serif;
 }
+.clear{clear:both;display:block;width:0 !important;height:0 !important;min-height:0 !important;min-width:0 !important;margin:0 !important;padding:0 !important;overflow:hidden}
 a{
 	text-decoration: none;
 }
@@ -51,6 +52,10 @@ div.buttons{
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+}
+/************************************Internet page*************************************/
+.buttons{
+	position: relative;
 }
 .buttons a {
 	text-align: center;
@@ -120,3 +125,23 @@ div.buttons{
 .mokhaberat img { vertical-align: -12px;}
 .pars img { vertical-align: -7px;}
 .buttons a img { border: 0; }
+
+span.verline{
+	display: inline-block;
+	position: absolute;
+	top: -50px;
+	right: 130px;
+	width: 1px;
+	height: 500px;
+	background: url('../images/line.jpg') repeat-y left;
+}
+
+span.horline{
+	display: inline-block;
+	position: absolute;
+	top: -30px;
+	right: 80px;
+	width: 730px;
+	height: 1px;
+	background: url('../images/line.jpg') repeat-x center;
+}
