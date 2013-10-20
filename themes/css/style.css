@@ -126,7 +126,7 @@ div.buttons{
 .pars img { vertical-align: -7px;}
 .buttons a img { border: 0; }
 
-span.verline{
+.buttons span.verline{
 	display: inline-block;
 	position: absolute;
 	top: -50px;
@@ -136,7 +136,7 @@ span.verline{
 	background: url('../images/line.jpg') repeat-y left;
 }
 
-span.horline{
+.buttons span.horline{
 	display: inline-block;
 	position: absolute;
 	top: -30px;
@@ -144,4 +144,11 @@ span.horline{
 	width: 730px;
 	height: 1px;
 	background: url('../images/line.jpg') repeat-x center;
+}
+
+.buttons .table{
+	position: absolute;
+	top: 0;
+	right: 150px;
+	left: 15px;
 }
