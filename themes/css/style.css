@@ -58,6 +58,7 @@ div.buttons{
 	position: relative;
 }
 .buttons a {
+	cursor: pointer;
 	text-align: center;
 	font-size: 20px;
 	margin-bottom: 30px;
@@ -102,22 +103,30 @@ div.buttons{
 	-moz-border-radius: 140px;
 	-webkit-border-radius: 140px;
 	border-radius: 140px;
-	opacity: 0.5;		
+	opacity: 0.5;
 }
 .buttons a:active::before {
 	top: -9px;
 }
-.buttons a:hover::before { opacity: 1; }
-.buttons a.shatel:hover::before {
+.buttons a:hover::before,
+.buttons a.active::before{
+	opacity: 1;
+}
+
+.buttons a.shatel:hover::before,
+.buttons .shatel.active::before {
 	background-color: #c6f0f8;
 }
-.buttons a.mokhaberat:hover::before {
+.buttons a.mokhaberat:hover::before,
+.buttons .mokhaberat.active::before {
 	background-color: #dae1f0;
 }
-.buttons a.fanava:hover::before {
+.buttons a.fanava:hover::before,
+.buttons .fanava.active::before {
 	background-color: #fadae6;
 }
-.buttons a.pars:hover::before {
+.buttons a.pars:hover::before,
+.buttons .pars.active::before {
 	background-color: #f8ebb6;
 }
 .shatel img { vertical-align: -7px; }
