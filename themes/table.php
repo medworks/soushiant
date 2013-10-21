@@ -3,8 +3,8 @@ $html="<table border='0' cellpadding='0' cellspacing='0'><tbody>";
 
 $html.=<<<cd
 		<tr>
-			<td class="tdtitle" style="border-right: 0px;" valign="baseline">نام سرویس: ECO128</td>
-			<td colspan="4" class="tdtitle" style="border-left: 0px;" valign="baseline">سرعت تا:&nbsp; 128/<strong>128</strong>کیلو بیت بر ثانیه</td>
+			<td class="tdtitle" style="border-right: 1px solid transparent;">نام سرویس: ---</td>
+			<td colspan="4" class="tdtitle" style="border-left:  1px solid transparent;">سرعت: 128/128 کیلو بیت بر ثانیه</td>
 		</tr>
 		<tr>
 			<td class="tdbox" valign="baseline" width="*">مدت سرویس</td>
@@ -21,14 +21,14 @@ $html.=<<<cd
 			<td class="tdbox lcol align-c" valign="baseline">۱۵</td>
 		</tr>
 		<tr>
-			<td class="tdbox" valign="baseline">هزینه اشتراک / تومان</td>
+			<td class="tdbox" valign="baseline">هزینه اشتراک/ تومان</td>
 			<td class="tdbox align-c" valign="baseline">۱۳٫۹۰۰</td>
 			<td class="tdbox align-c" valign="baseline">۲۹٫۹۰۰</td>
 			<td class="tdbox align-c" valign="baseline">۵۲٫۹۰۰</td>
 			<td class="tdbox lcol align-c" valign="baseline">۸۷٫۹۰۰</td>
 		</tr>
 		<tr>
-			<td class="tdbox even" valign="baseline">متوسط هزینه برای هر ماه / تومان</td>
+			<td class="tdbox even" valign="baseline">متوسط هزینه هر ماه/ تومان</td>
 			<td class="tdbox even align-c" valign="baseline">۱۳٫۹۰۰</td>
 			<td class="tdbox even align-c" valign="baseline">۹٫۹۰۰</td>
 			<td class="tdbox even align-c" valign="baseline">۸٫۸۰۰</td>
