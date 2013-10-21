@@ -21,6 +21,16 @@ a{
 .rtl{
 	direction: rtl;
 }
+table {
+  direction: rtl;
+}
+
+td {
+  vertical-align: top;
+  text-align: right;
+  font-family: tahoma;
+  font-size: 9pt;
+}
 h1,h2,h3,h4,h5,h6,p,a,span{
 	font-family: 'bmitra';
 }
@@ -154,10 +164,75 @@ div.buttons{
 	height: 1px;
 	background: url('../images/line.jpg') repeat-x center;
 }
-
+/******Table******/
 .buttons .table{
 	position: absolute;
 	top: 0;
 	right: 150px;
 	left: 15px;
+	background: url('../images/table-bg.gif') no-repeat top center;
+	width: 640px;
+	margin: 0 auto;
+	font-family: 'bmitra';
+	font-weight: normal;
+}
+
+.table .tdtitle {
+border-right: 1px solid #d7d6d6;
+border-left: 1px solid #FFFFFF;
+height: 62px;
+text-align: center;
+border-bottom: 1px solid #d7d6d6;
+color: #436487;
+vertical-align: middle;
+padding: 0 5px;
+font-family: tahoma;
+font-size: 12px;
+font-weight: bold;
+}
+
+.table .tdbox {
+border-right: 1px solid #d7d6d6;
+border-left: 1px solid #FFFFFF;
+height: 35px;
+text-align: right;
+border-bottom: 1px solid #d7d6d6;
+border-top: 1px solid #ffffff;
+color: #363636;
+vertical-align: middle;
+padding: 0 5px;
+background: #f7f7f7;
+}
+
+.table a {
+text-decoration: none;
+color: #363636;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+.table .lcol {
+border-left: 1px solid #d7d6d6;
+}
+
+.table-standard .even {
+color: #f4720e;
+}
+
+.table .even a {
+  color: #f4720e;
+}
+
+.table .align-l {
+text-align: left;
+}
+
+.table .align-c {
+text-align: center;
+}
+
+.table .align-r {
+text-align: right;
 }
