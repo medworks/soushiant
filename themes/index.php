@@ -80,16 +80,16 @@
             <!-- List of Triggers -->
             <ul class="triggers">
                 <li class="trigger-item">
-                    <a href="about" class="tip" title="درباره ما" data-url="about.html" data-type="page" data-title="About"><i class="icon-user"></i></a>
+                    <a href="about" class="tip" title="درباره ما" data-url="about.html" data-type="page" data-title="About"><i class="icon-info"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="portfolio" class="tip" title="گالری تصاویر" data-url="portfolio.html" data-type="page" data-title="Portfolio"><i class="icon-briefcase"></i></a>
+                    <a href="gallery" class="tip" title="گالری تصاویر" data-url="gallery.html" data-type="page" data-title="Gallery"><i class="icon-laptop"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="icon-mobile-phone"></i></a>
+                    <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="icon-tablet"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="LinkedIn" data-type="link" data-title="LinkedIn" target="_blank"><i class="icon-linkedin"></i></a>
+                    <a href="product" class="tip" title="کارهای ما" data-url="product.html" data-type="page" data-title="Product" target="_blank"><i class="icon-terminal"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="icon-google-plus"></i></a>
