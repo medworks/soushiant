@@ -80,28 +80,28 @@
             <!-- List of Triggers -->
             <ul class="triggers">
                 <li class="trigger-item">
-                    <a href="about" class="tip" title="درباره ما" data-url="about.html" data-type="page" data-title="About"><i class="icon-info"></i></a>
+                    <a href="about" class="tip" title="درباره ما" data-url="about.html" data-type="page" data-title="About"><i class="about"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="gallery" class="tip" title="گالری تصاویر" data-url="gallery.html" data-type="page" data-title="Gallery"><i class="icon-laptop"></i></a>
+                    <a href="gallery" class="tip" title="گالری تصاویر" data-url="gallery.html" data-type="page" data-title="Gallery"><i class="gallery"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="mobile"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="portfolio" class="tip" title="کارهای ما" data-url="portfolio.html" data-type="page" data-title="Portfolio" target="_blank"><i class="icon-terminal"></i></a>
+                    <a href="portfolio" class="tip" title="کارهای ما" data-url="portfolio.html" data-type="page" data-title="Portfolio" target="_blank"><i class="it"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="google"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="icon-github"></i></a>
+                    <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="voip"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="internet" class="tip" title="اینترنت" data-url="internet.html" data-type="page" data-title="اینترنت"><i class="icon-signal"></i></a>
+                    <a href="internet" class="tip" title="اینترنت" data-url="internet.html" data-type="page" data-title="اینترنت"><i class="internet"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="contact" class="tip" title="تماس با ما" data-url="contact.php" data-type="page" data-title="Email"><i class="icon-envelope-alt"></i></a>
+                    <a href="contact" class="tip" title="تماس با ما" data-url="contact.php" data-type="page" data-title="Email"><i class="contact"></i></a>
                 </li>
             </ul>
             <!-- End List of Triggers -->
