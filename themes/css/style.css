@@ -60,6 +60,17 @@ div.buttons{
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 }
+/************************************Icons*************************************/
+li.trigger-item a i{
+	padding: 24px 8px !important;
+}
+li.trigger-item a i.google{
+	background: url('../images/google-plus.png') no-repeat center;
+}
+
+li.trigger-item a i.mobile{
+	background: url('../images/phone.png') no-repeat center;
+}
 /************************************Button*************************************/
 .buttons{
 	position: relative;
