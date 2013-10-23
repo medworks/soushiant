@@ -179,7 +179,7 @@ div.buttons{
 }
 .table .tdtitle {
 	border-right: 1px solid #d7d6d6;
-	border-left: 1px solid #FFFFFF;
+	/*border-left: 1px solid #FFFFFF;*/
 	height: 62px;
 	text-align: center;
 	border-bottom: 1px solid #d7d6d6;
@@ -192,7 +192,7 @@ div.buttons{
 }
 .table .tdbox {
 	border-right: 1px solid #d7d6d6;
-	border-left: 1px solid #FFFFFF;
+	/*border-left: 1px solid #FFFFFF;*/
 	height: 35px;
 	text-align: right;
 	border-bottom: 1px solid #d7d6d6;
