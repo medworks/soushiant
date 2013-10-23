@@ -89,7 +89,7 @@
                     <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="icon-tablet"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="product" class="tip" title="کارهای ما" data-url="product.html" data-type="page" data-title="Product" target="_blank"><i class="icon-terminal"></i></a>
+                    <a href="portfolio" class="tip" title="کارهای ما" data-url="portfolio.html" data-type="page" data-title="Portfolio" target="_blank"><i class="icon-terminal"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="icon-google-plus"></i></a>
