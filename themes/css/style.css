@@ -64,7 +64,7 @@ div.buttons{
 .buttons{
 	position: relative;
 }
-.buttons a {
+.buttons > a {
 	cursor: pointer;
 	text-align: center;
 	font-size: 20px;
@@ -197,18 +197,15 @@ div.buttons{
 	text-align: right;
 	border-bottom: 1px solid #d7d6d6;
 	border-top: 1px solid #ffffff;
-	color: #363636;
+	color: #000;
 	vertical-align: middle;
 	padding: 0 5px;
 	background: #f7f7f7;
 	font-size: 17px;
 }
-.table a {
-	text-decoration: none;
+.table table a {
+	text-decoration: underline;
 	color: #363636;
-}
-.table a:hover {
-  text-decoration: underline;
 }
 .table .lcol {
 	border-left: 1px solid #d7d6d6;

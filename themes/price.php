@@ -22,10 +22,10 @@ $html.=<<<cd
 		</tr>
 		<tr>
 			<td class="tdbox" valign="baseline">هزینه اشتراک/ تومان</td>
-			<td class="tdbox align-c" valign="baseline">۱۳٫۹۰۰</td>
-			<td class="tdbox align-c" valign="baseline">۲۹٫۹۰۰</td>
-			<td class="tdbox align-c" valign="baseline">۵۲٫۹۰۰</td>
-			<td class="tdbox lcol align-c" valign="baseline">۸۷٫۹۰۰</td>
+			<td class="tdbox align-c" valign="baseline"><a href="#">۱۳٫۹۰۰</a></td>
+			<td class="tdbox align-c" valign="baseline"><a href="#">۲۹٫۹۰۰</a></td>
+			<td class="tdbox align-c" valign="baseline"><a href="#">۵۲٫۹۰۰</a></td>
+			<td class="tdbox lcol align-c" valign="baseline"><a href="#">۸۷٫۹۰۰</a></td>
 		</tr>
 		<tr>
 			<td class="tdbox even" valign="baseline">متوسط هزینه هر ماه/ تومان</td>
