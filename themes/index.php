@@ -86,13 +86,13 @@
                     <a href="gallery" class="tip" title="گالری تصاویر" data-url="gallery.html" data-type="page" data-title="Gallery"><i class="icon-laptop"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="icon-tablet"></i></a>
+                    <a href="#" class="tip" title="پنل اس ام اس" data-type="link" data-title="sms-panel" target="_blank"><i class="mobile"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="portfolio" class="tip" title="کارهای ما" data-url="portfolio.html" data-type="page" data-title="Portfolio" target="_blank"><i class="icon-terminal"></i></a>
                 </li>
                 <li class="trigger-item">
-                    <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="icon-google-plus"></i></a>
+                    <a href="#" class="tip" title="Google+" data-type="link" data-title="Google+" target="_blank"><i class="google"></i></a>
                 </li>
                 <li class="trigger-item">
                     <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="icon-github"></i></a>
