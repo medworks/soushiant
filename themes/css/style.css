@@ -89,7 +89,7 @@ div.buttons{
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 }
-.buttons a:active {
+.buttons > a:active {
 	top: 1px;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
 	background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
@@ -98,7 +98,7 @@ div.buttons{
 	background-image: -o-linear-gradient(top, #eaeaea, #f6f6f6);
 	background-image: linear-gradient(top, #eaeaea, #f6f6f6);
 }
-.buttons a::before{
+.buttons > a::before{
 	content: '';
 	position: absolute;
 	z-index: -1;
@@ -112,36 +112,14 @@ div.buttons{
 	border-radius: 140px;
 	opacity: 0.5;
 }
-.buttons a:active::before {
+.buttons > a:active::before {
 	top: -9px;
 }
-.buttons a:hover::before,
-.buttons a.active::before{
+.buttons > a:hover::before,
+.buttons > a.active::before{
 	opacity: 1;
-}
-
-.buttons a.shatel:hover::before,
-.buttons .shatel.active::before {
 	background-color: #c6f0f8;
 }
-.buttons a.mokhaberat:hover::before,
-.buttons .mokhaberat.active::before {
-	background-color: #dae1f0;
-}
-.buttons a.fanava:hover::before,
-.buttons .fanava.active::before {
-	background-color: #fadae6;
-}
-.buttons a.pars:hover::before,
-.buttons .pars.active::before {
-	background-color: #f8ebb6;
-}
-.shatel img { vertical-align: -7px; }
-.fanava img { vertical-align: -12px; }
-.mokhaberat img { vertical-align: -12px;}
-.pars img { vertical-align: -7px;}
-.buttons a img { border: 0; }
-
 .buttons span.verline{
 	display: inline-block;
 	position: absolute;
