@@ -29,37 +29,16 @@
 			break;
 			case 'dashboard':
 				if ($act=="do") return "dashboard.php";
-			break;	
-            case 'works':
-				$seo->Site_Title = "کارهای ما";
-                if ($act=="do") return "themes/default/works.php";
-            break;
-            case 'fullworks':
-                if ($act=="do") return "themes/default/single-works.php";
-            break;			          
-            case 'news':
-				$seo->Site_Title = "اخبار";
-                if ($act=="do") return "themes/default/news.php";
-			break;
-			case 'fullnews':
-                if ($act=="do") return "themes/default/single-news.php";
-			break;
+			break;	            
 			case 'search':
 				$seo->Site_Title = "جستجو";
                 if ($act=="do") return "themes/default/search.php";
-			break;
-			case 'articles':
-				$seo->Site_Title = "مطالب مفید";
-                return "themes/default/articles.php";
-			break;
-			case 'fullarticles':
-                if ($act=="do") return "themes/default/single-articles.php";
-			break;
+			break;			
 			case 'uploadmgr':
               if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/uploadmgr.php";
 			break;
-			case 'worksmgr':
-                if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/worksmgr.php";
+			case 'compmgr':
+                if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/companymgr.php";
 			break;
 			case 'articlesmgr':
                 if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/articlesmgr.php";
