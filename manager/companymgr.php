@@ -12,6 +12,22 @@
 		die(); // solve a security bug
 	}
 	$db = Database::GetDatabase();
+if ($_GET['act']=="new")
+{
+	$editorinsert = "
+		<p>
+			<input type='submit' id='submit' value='ذخیره' class='submit' />	 
+			<input type='hidden' name='mark' value='savecomp' />";
+}
+if ($_GET['act']=="edit")
+{
+	$row=$db->Select("news","*","id='{$_GET["nid"]}'",NULL);
+	$row['ndate'] = ToJalali($row["ndate"]);
+	$editorinsert = "
+	<p>
+      	 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
+      	 <input type='hidden' name='mark' value='editcomp' />";
+}
 	if ($_GET['act']=="do")
 {
 	$html=<<<ht
