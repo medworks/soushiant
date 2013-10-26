@@ -231,7 +231,7 @@ $code=<<<edit
 						<center>
 							<form action="?item=compmgr&act=mgr" method="post" id="frmsrh" name="frmsrh">
 								<p>جستجو بر اساس {$combobox}</p>
-								<input type="text" id="date_input_1" name="txtsrh" class="search-form" value="جستجو..." onfocus="if (this.value == 'جستجو...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو...';}"  /> 
+								<input type="text" id="txtsrh" name="txtsrh" class="search-form" value="جستجو..." onfocus="if (this.value == 'جستجو...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو...';}"  /> 
 								<p class="search-form">									
 									<a href="?item=compmgr&act=mgr" name="srhsubmit" id="srhsubmit" class="button"> جستجو</a>
 									<a href="?item=compmgr&act=mgr&rec=all" name="retall" id="retall" class="button"> کلیه اطلاعات</a>
