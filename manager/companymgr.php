@@ -12,22 +12,60 @@
 		die(); // solve a security bug
 	}
 	$db = Database::GetDatabase();
-if ($_GET['act']=="new")
-{
-	$editorinsert = "
+	if (!$overall_error && $_POST["mark"]=="savecomp")
+	{	    
+		$fields = array("`name`","`detail`");
+		$_POST["detail"] = addslashes($_POST["detail"]);		
+		$values = array("'{$_POST[name]}'","'{$_POST[detail]}'");
+		if (!$db->InsertQuery('service',$fields,$values)) 
+		{
+			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
+			header('location:?item=compmgr&act=new&msg=2');			
+			//$_GET["item"] = "newsmgr";
+			//$_GET["act"] = "new";
+			//$_GET["msg"] = 2;
+		} 	
+		else 
+		{  										
+			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");			
+			header('location:?item=compmgr&act=new&msg=1');		    
+			//$_GET["item"] = "newsmgr";
+			//$_GET["act"] = "new";
+			//$_GET["msg"] = 1;
+		}  				 
+	}
+    else
+	if (!$overall_error && $_POST["mark"]=="editcomp")
+	{		
+	    $_POST["detail"] = addslashes($_POST["detail"]);	    
+		$values = array("`name`"=>"'{$_POST[subject]}'",
+			            "`detail`"=>"'{$_POST[selectpic]}'");
+			
+        $db->UpdateQuery("service",$values,array("id='{$_GET[nid]}'"));
+		header('location:?item=compmgr&act=mgr');
+		//$_GET["item"] = "newsmgr";
+		//$_GET["act"] = "act";			
+	}
+	if ($_GET['act']=="new")
+	{
+		$editorinsert = "
+			<p>
+				<input type='submit' id='submit' value='ذخیره' class='submit' />	 
+				<input type='hidden' name='mark' value='savecomp' />";
+	}
+	if ($_GET['act']=="edit")
+	{	
+		$editorinsert = "
 		<p>
-			<input type='submit' id='submit' value='ذخیره' class='submit' />	 
-			<input type='hidden' name='mark' value='savecomp' />";
-}
-if ($_GET['act']=="edit")
-{
-	$row=$db->Select("news","*","id='{$_GET["nid"]}'",NULL);
-	$row['ndate'] = ToJalali($row["ndate"]);
-	$editorinsert = "
-	<p>
-      	 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
-      	 <input type='hidden' name='mark' value='editcomp' />";
-}
+			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
+			 <input type='hidden' name='mark' value='editcomp' />";
+	}
+	if ($_GET['act']=="del")
+	{
+		$db->Delete("service"," id",$_GET["nid"]);
+		if ($db->CountAll("service")%10==0) $_GET["pageNo"]-=1;		
+		header("location:?item=compmgr&act=mgr&pageNo={$_GET[pageNo]}");
+	}
 	if ($_GET['act']=="do")
 {
 	$html=<<<ht
