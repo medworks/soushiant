@@ -40,12 +40,12 @@
 	if (!$overall_error && $_POST["mark"]=="editcomp")
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);	    
-		$values = array("`name`"=>"'{$_POST[subject]}'",
-			            "`detail`"=>"'{$_POST[selectpic]}'");
+		$values = array("`name`"=>"'{$_POST[name]}'",
+			            "`detail`"=>"'{$_POST[detail]}'");
 			
         $db->UpdateQuery("service",$values,array("id='{$_GET[cid]}'"));
 		header('location:?item=compmgr&act=mgr');
-		//$_GET["item"] = "newsmgr";
+		//$_GET["item"] = "compmgr";
 		//$_GET["act"] = "act";			
 	}
 	if ($_GET['act']=="new")
