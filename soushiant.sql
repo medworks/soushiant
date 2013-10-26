@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2013 at 06:46 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Generation Time: Oct 26, 2013 at 09:17 AM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.3
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `soushiant`
 --
+CREATE DATABASE IF NOT EXISTS `soushiant` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `soushiant`;
 
 -- --------------------------------------------------------
 
@@ -29,8 +31,16 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `service` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
+  `detail` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `service`
+--
+
+INSERT INTO `service` (`id`, `name`, `detail`) VALUES
+(1, 'شاتل', '<p>برترین برند خدماتی در زمینه اینترنت</p>');
 
 -- --------------------------------------------------------
 
