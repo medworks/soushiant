@@ -12,6 +12,8 @@
 		die(); // solve a security bug
 	}
 	$db = Database::GetDatabase();
+	$overall_error = false;
+	if ($_GET['item']!="compmgr")	exit();
 	if (!$overall_error && $_POST["mark"]=="savecomp")
 	{	    
 		$fields = array("`name`","`detail`");
@@ -21,7 +23,7 @@
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
 			header('location:?item=compmgr&act=new&msg=2');			
-			//$_GET["item"] = "newsmgr";
+			//$_GET["item"] = "compmgr";
 			//$_GET["act"] = "new";
 			//$_GET["msg"] = 2;
 		} 	
@@ -29,7 +31,7 @@
 		{  										
 			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");			
 			header('location:?item=compmgr&act=new&msg=1');		    
-			//$_GET["item"] = "newsmgr";
+			//$_GET["item"] = "compmgr";
 			//$_GET["act"] = "new";
 			//$_GET["msg"] = 1;
 		}  				 
@@ -41,7 +43,7 @@
 		$values = array("`name`"=>"'{$_POST[subject]}'",
 			            "`detail`"=>"'{$_POST[selectpic]}'");
 			
-        $db->UpdateQuery("service",$values,array("id='{$_GET[nid]}'"));
+        $db->UpdateQuery("service",$values,array("id='{$_GET[cid]}'"));
 		header('location:?item=compmgr&act=mgr');
 		//$_GET["item"] = "newsmgr";
 		//$_GET["act"] = "act";			
@@ -55,6 +57,7 @@
 	}
 	if ($_GET['act']=="edit")
 	{	
+		$row=$db->Select("service","*","id='{$_GET["cid"]}'",NULL);
 		$editorinsert = "
 		<p>
 			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
@@ -62,7 +65,7 @@
 	}
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("service"," id",$_GET["nid"]);
+		$db->Delete("service"," id",$_GET["cid"]);
 		if ($db->CountAll("service")%10==0) $_GET["pageNo"]-=1;		
 		header("location:?item=compmgr&act=mgr&pageNo={$_GET[pageNo]}");
 	}
@@ -126,7 +129,7 @@ $html=<<<cd
          <label for="detail">توضیحات</label>
          <span>*</span>
        </p>
-       <textarea cols="50" rows="10" name="detail" class="detail" id="detail" > {$row[body]}</textarea>  	   
+       <textarea cols="50" rows="10" name="detail" class="detail" id="detail" > {$row[detail]}</textarea>  	   
 	   {$editorinsert}
       	 <input type="reset" value="پاک کردن" class='reset' />
        </p>  
@@ -149,7 +152,7 @@ if ($_GET['act']=="mgr")
 				10);
 			if (!$rows) 
 			{					
-				//$_GET['item'] = "newsmgr";
+				//$_GET['item'] = "compmgr";
 				//$_GET['act'] = "mgr";
 				//$_GET['msg'] = 6;				
 				header("Location:?item=compmgr&act=mgr&msg=6");
@@ -171,8 +174,8 @@ if ($_GET['act']=="mgr")
                 $rowCount =($_GET["rec"]=="all" or $_POST["mark"]!="srhnews")?$db->CountAll("service"):Count($rows);
                 for($i = 0; $i < Count($rows); $i++)
                 {						
-					$rows[$i]["detail"] =(mb_strlen($rows[$i]["detail"])>30)?
-					mb_substr(html_entity_decode(strip_tags($rows[$i]["detail"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
+					$rows[$i]["detail"] =(mb_strlen($rows[$i]["detail"])>50)?
+					mb_substr(html_entity_decode(strip_tags($rows[$i]["detail"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
 					html_entity_decode(strip_tags($rows[$i]["detail"]), ENT_QUOTES, "UTF-8");						
 					if ($i % 2==0)
 					 {
@@ -182,13 +185,13 @@ if ($_GET['act']=="mgr")
 					{
 							$rowsClass[] = "datagridoddrow";
 					}					
-					$rows[$i]["edit"] = "<a href='?item=compmgr&act=edit&nid={$rows[$i]["id"]}' class='edit-field'" .
+					$rows[$i]["edit"] = "<a href='?item=compmgr&act=edit&cid={$rows[$i]["id"]}' class='edit-field'" .
 							"style='text-decoration:none;'></a>";								
 					$rows[$i]["delete"]=<<< del
 					<a href="javascript:void(0)"
 					onclick="DelMsg('{$rows[$i]['id']}',
 						'از حذف این خبر اطمینان دارید؟',
-					'?item=compmgr&act=del&pageNo={$_GET[pageNo]}&nid=');"
+					'?item=compmgr&act=del&pageNo={$_GET[pageNo]}&cid=');"
 					 class='del-field' style='text-decoration:none;'></a>
 del;
                 }
