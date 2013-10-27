@@ -17,9 +17,9 @@
 	if ($_GET['item']!="plansmgr")	exit();
 	if (!$overall_error && $_POST["mark"]=="saveplan")
 	{	    
-		$fields = array("`name`","`speeddl`","`speedup`","`time`","`trafic`","`price`","`detail`");
+		$fields = array("`sid`","`name`","`speeddl`","`speedup`","`time`","`trafic`","`price`","`detail`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
-		$values = array("'{$_POST[name]}'","'{$_POST[speeddl]}'","'{$_POST[speedup]}'","'{$_POST[time]}'","'{$_POST[trafic]}'","'{$_POST[price]}'","'{$_POST[detail]}'");
+		$values = array("'{$_POST[comp]}'","'{$_POST[name]}'","'{$_POST[speeddl]}'","'{$_POST[speedup]}'","'{$_POST[time]}'","'{$_POST[trafic]}'","'{$_POST[price]}'","'{$_POST[detail]}'");
 		if (!$db->InsertQuery('subservice',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -41,7 +41,8 @@
 	if (!$overall_error && $_POST["mark"]=="editplan")
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);	    
-		$values = array("`name`"=>"'{$_POST[name]}'",
+		$values = array("`sid`"=>"'{$_POST[comp]}'",
+		                "`name`"=>"'{$_POST[name]}'",
 						"`speeddl`"=>"'{$_POST[speeddl]}'",
 						"`speedup`"=>"'{$_POST[speedup]}'",
 						"`time`"=>"'{$_POST[time]}'",
@@ -105,7 +106,8 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
-$sections = $db->SelectAll("service","*",null,"id ASC");
+$rows = $db->SelectAll("service","*",null,"id ASC");
+$comp = DbSelectOptionTag("comp",$rows,"name");
 $html=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){	   
@@ -124,6 +126,12 @@ $html=<<<cd
   <div class='content'>
 	<form name="frmplansmgr" id="frmplansmgr" class="" action="" method="post" >
      <p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>	 
+	 <div class="badboy"></div>
+       <p>
+         <label for="name">نام شرکت</label>
+         <span>*</span>
+       </p>
+	   {$comp}
        <div class="badboy"></div>
        <p>
          <label for="name">نام طرح</label>
