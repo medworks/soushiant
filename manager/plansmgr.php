@@ -298,7 +298,6 @@ $code=<<<edit
 							</form>
 					   </center>
 					</div>
-
 edit;
 $html = $code;
 }	
