@@ -180,7 +180,7 @@ if ($_GET['act']=="mgr")
 	if ($_POST["mark"]=="srhnews")
 	{	 			    
 		$rows = $db->SelectAll(
-				"service",
+				"subservice",
 				"*",
 				"{$_POST[cbsearch]} LIKE '%{$_POST[txtsrh]}%'",
 				null,
@@ -188,17 +188,17 @@ if ($_GET['act']=="mgr")
 				10);
 			if (!$rows) 
 			{					
-				//$_GET['item'] = "compmgr";
+				//$_GET['item'] = "plansmgr";
 				//$_GET['act'] = "mgr";
 				//$_GET['msg'] = 6;				
-				header("Location:?item=compmgr&act=mgr&msg=6");
+				header("Location:?item=plansmgr&act=mgr&msg=6");
 			}
 		
 	}
 	else
 	{	
 		$rows = $db->SelectAll(
-				"service",
+				"subservice",
 				"*",
 				null,
 				null,
@@ -207,7 +207,7 @@ if ($_GET['act']=="mgr")
     }
                 $rowsClass = array();
                 $colsClass = array();
-                $rowCount =($_GET["rec"]=="all" or $_POST["mark"]!="srhnews")?$db->CountAll("service"):Count($rows);
+                $rowCount =($_GET["rec"]=="all" or $_POST["mark"]!="srhnews")?$db->CountAll("subservice"):Count($rows);
                 for($i = 0; $i < Count($rows); $i++)
                 {						
 					$rows[$i]["detail"] =(mb_strlen($rows[$i]["detail"])>50)?
@@ -221,13 +221,13 @@ if ($_GET['act']=="mgr")
 					{
 							$rowsClass[] = "datagridoddrow";
 					}					
-					$rows[$i]["edit"] = "<a href='?item=compmgr&act=edit&pid={$rows[$i]["id"]}' class='edit-field'" .
+					$rows[$i]["edit"] = "<a href='?item=plansmgr&act=edit&pid={$rows[$i]["id"]}' class='edit-field'" .
 							"style='text-decoration:none;'></a>";								
 					$rows[$i]["delete"]=<<< del
 					<a href="javascript:void(0)"
 					onclick="DelMsg('{$rows[$i]['id']}',
 						'از حذف این خبر اطمینان دارید؟',
-					'?item=compmgr&act=del&pageNo={$_GET[pageNo]}&pid=');"
+					'?item=plansmgr&act=del&pageNo={$_GET[pageNo]}&pid=');"
 					 class='del-field' style='text-decoration:none;'></a>
 del;
                 }
@@ -236,15 +236,25 @@ del;
             if (Count($rows) > 0)
             {                    
                     $gridcode .= DataGrid(array( 
-					        "name"=>"نام شرکت",
+					        "name"=>"نام طرح",
+							"speeddl"=>"سرعت دانلود",
+							"speedup"=>"سرعت آپلود",
+							"time"=>"مدت دوره",
+							"trafic"=>"ترافیک(GB)",
+							"price"=>"هزینه(تومان)",
 							"detail"=>"توضیحات",							
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
-                            $_GET["pageNo"], "id", false, true, true, $rowCount,"item=compmgr&act=mgr");
+                            $_GET["pageNo"], "id", false, true, true, $rowCount,"item=plansmgr&act=mgr");
                     
             }
 $msgs = GetMessage($_GET['msg']);
-$list = array("name"=>"نام شرکت",
+$list = array("name"=>"نام طرح",
+              "speeddl"=>"سرعت دانلود",
+			  "speedup"=>"سرعت آپلود",
+			  "time"=>"مدت دوره",
+			  "trafic"=>"ترافیک(GB)",
+			  "price"=>"هزینه(تومان)",
               "detail"=>"توضیحات");
 $combobox = SelectOptionTag("cbsearch",$list,"name");
 $code=<<<edit
