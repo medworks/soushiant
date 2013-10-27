@@ -99,7 +99,6 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
-$sections = $db->SelectAll("service","*",null,"id ASC");
 $html=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){	   
