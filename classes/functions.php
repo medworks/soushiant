@@ -441,6 +441,12 @@ code;
 		$row = $db ->Select("section","secname","ID = '{$secid}'");
 		return ($row["secname"]);
 	}
+	function GetCompanyName($cid)
+	{
+	    $db = Database::GetDatabase();
+		$row = $db ->Select("service","name","ID = '{$cid}'");
+		return ($row["name"]);
+	}
 
 	// *****************CheckEmail Function***********************
 	function checkEmail($email) {
