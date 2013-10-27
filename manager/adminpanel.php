@@ -89,7 +89,7 @@
           </li>
 		 
           <li>
-            <a href="?item=articlesmgr&act=do" id="articles" name="articles" class="articles"><p>مدیریت طرح ها</p></a>
+            <a href="?item=plansmgr&act=do" id="articles" name="articles" class="articles"><p>مدیریت طرح ها</p></a>
           </li>
 		   <!--
           <li>
