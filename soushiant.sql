@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2013 at 09:17 AM
--- Server version: 5.6.11
--- PHP Version: 5.5.3
+-- Generation Time: Oct 27, 2013 at 04:33 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `soushiant`
 --
-CREATE DATABASE IF NOT EXISTS `soushiant` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `soushiant`;
 
 -- --------------------------------------------------------
 
@@ -94,15 +92,23 @@ CREATE TABLE IF NOT EXISTS `subservice` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sid` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `speeddl` tinyint(4) NOT NULL,
-  `speedup` tinyint(4) NOT NULL,
-  `time` tinyint(4) NOT NULL,
+  `speeddl` int(11) NOT NULL,
+  `speedup` int(11) NOT NULL,
+  `time` varchar(10) NOT NULL,
   `trafic` int(11) NOT NULL,
   `price` float NOT NULL,
   `avarage` float NOT NULL,
   `detail` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `subservice`
+--
+
+INSERT INTO `subservice` (`id`, `sid`, `name`, `speeddl`, `speedup`, `time`, `trafic`, `price`, `avarage`, `detail`) VALUES
+(1, 1, 'ECO 128/128 kbps', 128, 128, 'یک ماهه', 3, 14700, 0, '<p>ندارد</p>'),
+(2, 2, 'سعید', 128, 128, 'یک  ماهه', 3, 14700, 0, '');
 
 -- --------------------------------------------------------
 
