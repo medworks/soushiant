@@ -15,7 +15,28 @@
 	$db = Database::GetDatabase();
 	$overall_error = false;
 	if ($_GET['item']!="plansmgr")	exit();
-		if ($_GET['act']=="do")
+	if ($_GET['act']=="new")
+	{
+		$editorinsert = "
+			<p>
+				<input type='submit' id='submit' value='ذخیره' class='submit' />	 
+				<input type='hidden' name='mark' value='saveplan' />";
+	}
+	if ($_GET['act']=="edit")
+	{	
+		$row=$db->Select("subservice","*","id='{$_GET["cid"]}'",NULL);
+		$editorinsert = "
+		<p>
+			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
+			 <input type='hidden' name='mark' value='editplan' />";
+	}
+	if ($_GET['act']=="del")
+	{
+		$db->Delete("subservice"," id",$_GET["cid"]);
+		if ($db->CountAll("subservice")%10==0) $_GET["pageNo"]-=1;		
+		header("location:?item=plansmgr&act=mgr&pageNo={$_GET[pageNo]}");
+	}
+if ($_GET['act']=="do")
 {
 	$html=<<<ht
 		<div class="title">
@@ -66,10 +87,40 @@ $html=<<<cd
      <p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>	 
        <div class="badboy"></div>
        <p>
-         <label for="name">عنوان شرکت</label>
+         <label for="name">نام طرح</label>
          <span>*</span>
        </p>    
-       <input type="text" name="name" class="validate[required] subject" id="name" value='{$row[name]}'/>   	  
+       <input type="text" name="name" class="validate[required] subject" id="name" value='{$row[name]}'/>
+	   <div class="badboy"></div>
+       <p>
+         <label for="name">سرعت دانلود</label>
+         <span>*</span>
+       </p>    
+       <input type="text" name="speeddl" class="validate[required] subject" id="speeddl" value='{$row[speeddl]}'/> 
+		<div class="badboy"></div>
+       <p>
+         <label for="name">سرعت آپلود</label>
+         <span>*</span>
+       </p>    
+       <input type="text" name="speedup" class="validate[required] subject" id="speedup" value='{$row[speedup]}'/>
+		<div class="badboy"></div>
+       <p>
+         <label for="name">مدت زمان طرح</label>
+         <span>*</span>
+       </p>    
+       <input type="text" name="time" class="validate[required] subject" id="time" value='{$row[time]}'/> 
+		<div class="badboy"></div>
+       <p>
+         <label for="name">میزان ترافیک (GB)</label>
+         <span>*</span>
+       </p>    
+       <input type="text" name="trafic" class="validate[required] subject" id="trafic" value='{$row[trafic]}'/>
+		<div class="badboy"></div>
+       <p>
+         <label for="name">هزینه دوره(تومان) (GB)</label>
+         <span>*</span>
+       </p>    
+       <input type="text" name="price" class="validate[required] subject" id="price" value='{$row[price]}'/> 	   
 	   <div class="badboy"></div>
   	   <p>
          <label for="detail">توضیحات</label>
