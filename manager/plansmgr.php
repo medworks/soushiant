@@ -15,6 +15,45 @@
 	$db = Database::GetDatabase();
 	$overall_error = false;
 	if ($_GET['item']!="plansmgr")	exit();
+	if (!$overall_error && $_POST["mark"]=="saveplan")
+	{	    
+		$fields = array("`name`","`speeddl`","`speedup`","`time`","`trafic`","`price`","`detail`");
+		$_POST["detail"] = addslashes($_POST["detail"]);		
+		$values = array("'{$_POST[name]}'","'{$_POST[speeddl]}'","'{$_POST[speedup]}'","'{$_POST[time]}'","'{$_POST[trafic]}'","'{$_POST[price]}'","'{$_POST[detail]}'");
+		if (!$db->InsertQuery('subservice',$fields,$values)) 
+		{
+			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
+			header('location:?item=plansmgr&act=new&msg=2');			
+			//$_GET["item"] = "plansmgr";
+			//$_GET["act"] = "new";
+			//$_GET["msg"] = 2;
+		} 	
+		else 
+		{  										
+			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");			
+			header('location:?item=plansmgr&act=new&msg=1');		    
+			//$_GET["item"] = "plansmgr";
+			//$_GET["act"] = "new";
+			//$_GET["msg"] = 1;
+		}  				 
+	}
+    else
+	if (!$overall_error && $_POST["mark"]=="editplan")
+	{		
+	    $_POST["detail"] = addslashes($_POST["detail"]);	    
+		$values = array("`name`"=>"'{$_POST[name]}'",
+						"`speeddl`"=>"'{$_POST[speeddl]}'",
+						"`speedup`"=>"'{$_POST[speedup]}'",
+						"`time`"=>"'{$_POST[time]}'",
+						"`trafic`"=>"'{$_POST[trafic]}'",
+						"`price`"=>"'{$_POST[price]}'",
+			            "`detail`"=>"'{$_POST[detail]}'");
+			
+        $db->UpdateQuery("subservice",$values,array("id='{$_GET[pid]}'"));
+		header('location:?item=plansmgr&act=mgr');
+		//$_GET["item"] = "plansmgr";
+		//$_GET["act"] = "act";			
+	}
 	if ($_GET['act']=="new")
 	{
 		$editorinsert = "
@@ -24,7 +63,7 @@
 	}
 	if ($_GET['act']=="edit")
 	{	
-		$row=$db->Select("subservice","*","id='{$_GET["cid"]}'",NULL);
+		$row=$db->Select("subservice","*","id='{$_GET["pid"]}'",NULL);
 		$editorinsert = "
 		<p>
 			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
@@ -32,7 +71,7 @@
 	}
 	if ($_GET['act']=="del")
 	{
-		$db->Delete("subservice"," id",$_GET["cid"]);
+		$db->Delete("subservice"," id",$_GET["pid"]);
 		if ($db->CountAll("subservice")%10==0) $_GET["pageNo"]-=1;		
 		header("location:?item=plansmgr&act=mgr&pageNo={$_GET[pageNo]}");
 	}
@@ -182,13 +221,13 @@ if ($_GET['act']=="mgr")
 					{
 							$rowsClass[] = "datagridoddrow";
 					}					
-					$rows[$i]["edit"] = "<a href='?item=compmgr&act=edit&cid={$rows[$i]["id"]}' class='edit-field'" .
+					$rows[$i]["edit"] = "<a href='?item=compmgr&act=edit&pid={$rows[$i]["id"]}' class='edit-field'" .
 							"style='text-decoration:none;'></a>";								
 					$rows[$i]["delete"]=<<< del
 					<a href="javascript:void(0)"
 					onclick="DelMsg('{$rows[$i]['id']}',
 						'از حذف این خبر اطمینان دارید؟',
-					'?item=compmgr&act=del&pageNo={$_GET[pageNo]}&cid=');"
+					'?item=compmgr&act=del&pageNo={$_GET[pageNo]}&pid=');"
 					 class='del-field' style='text-decoration:none;'></a>
 del;
                 }
