@@ -218,7 +218,8 @@ if ($_GET['act']=="mgr")
                 $rowCount =($_GET["rec"]=="all" or $_POST["mark"]!="srhnews")?$db->CountAll("subservice"):Count($rows);
                 for($i = 0; $i < Count($rows); $i++)
                 {						
-					$rows[$i]["detail"] =(mb_strlen($rows[$i]["detail"])>50)?
+				    $rows[$i]["sid"] = GetCompanyName($rows[$i]["sid"]); 
+					$rows[$i]["detail"] = (mb_strlen($rows[$i]["detail"])>50)?
 					mb_substr(html_entity_decode(strip_tags($rows[$i]["detail"]), ENT_QUOTES, "UTF-8"), 0, 50,"UTF-8") . "..." :
 					html_entity_decode(strip_tags($rows[$i]["detail"]), ENT_QUOTES, "UTF-8");						
 					if ($i % 2==0)
@@ -244,6 +245,7 @@ del;
             if (Count($rows) > 0)
             {                    
                     $gridcode .= DataGrid(array( 
+					        "sid"=>"نام شرکت",
 					        "name"=>"نام طرح",
 							"speeddl"=>"سرعت دانلود",
 							"speedup"=>"سرعت آپلود",
