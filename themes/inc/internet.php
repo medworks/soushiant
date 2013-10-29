@@ -16,7 +16,7 @@
 cd;
     foreach($rows as $key=>$val) 	
 	{
-		$html.="<a class='mokhaberat ' id='mokhaberat'>{$val[name]}</a>";
+		$html.="<a class='mokhaberat ' id='{$val[name]}'>{$val[name]}</a>";
 	}
 	$html.=<<<cd
 	<div class="table" id="table"></div>
