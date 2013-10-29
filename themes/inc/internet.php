@@ -2,8 +2,7 @@
 	include_once("../../config.php");
     include_once("../../classes/database.php");
 	include_once("../../classes/messages.php");	
-	include_once("../../classes/functions.php");
-	include_once("../../lib/persiandate.php");	
+	include_once("../../classes/functions.php");	
 	$db = Database::GetDatabase();
 	$html = "";
 	$rows = $db->SelectAll("service","*",null,"id ASC");
