@@ -97,6 +97,7 @@
                 <li class="trigger-item">
                     <a href="#" class="tip" title="GitHub" data-type="link" data-title="GitHub" target="_blank"><i class="voip"></i></a>
                 </li>
+				
                 <li class="trigger-item">
                     <a href="internet" class="tip" title="اینترنت" data-url="internet.php" data-type="page" data-title="Internet"><i class="internet"></i></a>
                 </li>
@@ -128,6 +129,7 @@
     <script type="text/javascript" src="./themes/js/main.min.js"></script>
     <script type="text/javascript" src="./themes/js/flexslider.js"></script>
     <script type="text/javascript" src="./themes/js/jquery.qtip.min.js"></script>
+	
     <script type="text/javascript">
         $('.switch_color li').on('click', function () {
              var color = $(this).data('color');
